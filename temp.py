@@ -4,7 +4,7 @@ from torchvision import transforms
 
 from hubconf import dinov2_vits14
 
-img_root = f'../../Dataset/MiniImageNet1k'
+img_root = f'/dataset/vfayezzhang/dataset/MiniImageNet1k'
 
 files = [f for f in os.listdir(img_root) if f.endswith('.jpg') or f.endswith('.png')]
 file_paths = [os.path.join(img_root, f) for f in files]
