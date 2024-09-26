@@ -3,7 +3,7 @@ from PIL import Image
 from torchvision import transforms
 import torch
 
-from hubconf import dinov2_vits14
+from hubconf import dinov2_vits14, dinov2_vitl14, dinov2_vitb14
 
 img_root = f'/dataset/vfayezzhang/dataset/MiniImageNet1k'
 
@@ -12,7 +12,7 @@ file_paths = [os.path.join(img_root, f) for f in files]
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 
-model = dinov2_vits14().to(device).eval()
+model = dinov2_vitl14().to(device).eval()
 
 transform = transforms.Compose([
     transforms.ToTensor(),
