@@ -26,4 +26,5 @@ for file_path in file_paths:
     feature = model(image, is_training=True)
     # The feature is a dict, print the keys to see what's inside
     print(f"Feature keys: {feature.keys()}")
-    break
+    for key, value in feature.items():
+        print(f"Feature {key}: {value.shape}")
