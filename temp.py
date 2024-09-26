@@ -16,8 +16,9 @@ model = dinov2_vitl14().to(device).eval()
 
 transform = transforms.Compose([
     transforms.ToTensor(),
-    transforms.Resize((490, 742)),
+    transforms.Resize((448, 672)),
 ])
+
 
 for file_path in file_paths:
     image = Image.open(file_path).convert('RGB')
