@@ -22,6 +22,6 @@ transform = transforms.Compose([
 
 for file_path in file_paths:
     image = Image.open(file_path).convert('RGB')
-    image = transform(image).unsqueeze(0)
+    image = transform(image).unsqueeze(0).to(device)
     feature = model(image, is_training=True)
     print(f"Type of feature: {type(feature)}")
