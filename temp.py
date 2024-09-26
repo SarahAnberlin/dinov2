@@ -16,8 +16,7 @@ model = dinov2_vits14().to(device).eval()
 
 transform = transforms.Compose([
     transforms.ToTensor(),
-    transforms.Resize(256),
-    transforms.CenterCrop(224),
+    transforms.Resize((480, 720)),
 ])
 
 for file_path in file_paths:
